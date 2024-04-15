@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "client_name": "LuxuryTraveler23",
+      "image":"https://i.ibb.co/NW4d3mg/pretty-smiling-joyfully-female-fair-260nw-776697943.webp",
+      "rating": "4.9",
+      "review": "Spectacular beachfront villa, unparalleled luxury, and breathtaking views. Impeccable service and elegant furnishings. A dream retreat for those seeking lavish paradise."
+    },
+    {
+      "id": 2,
+      "client_name": "ParadiseSeeker87",
+      "image":"https://i.ibb.co/bXcw340/images-3.jpg",
+      "rating": "4.6",
+      "review": "Extraordinary private island getaway, lavish villa, and world-class service. Pure bliss in every moment. An indulgent escape unlike any other."
+    },
+    {
+      "id": 3,
+      "client_name": "TranquilityEscape76",
+      "image":"https://i.ibb.co/mFnCxLh/Outdoors-man-portrait-cropped.jpg",
+      "rating": "4.8",
+      "review": "Beyond compare, tranquil opulence amidst lush landscapes. Exquisite villa, attentive staff, and rejuvenating experiences. A sanctuary of luxury and inspiration."
+    },
+    {
+      "id": 4,
+      "client_name": "EliteRetreats55",
+      "image":"https://i.ibb.co/f1TZr4J/beautiful-smiling-girl-260nw-151159397.webp",
+      "rating": "4.7",
+      "review": "Exceeded expectations with unparalleled luxury and sophistication. Remarkable attention to detail, breathtaking views, and impeccable service. An extraordinary getaway embodying true luxury."
+    }
+  ]

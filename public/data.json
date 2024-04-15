@@ -1,0 +1,80 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Oceanfront Penthouse",
+      "segment_name": "Penthouse",
+      "description": "Exquisite penthouse offering unparalleled views of the ocean and city skyline.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "3500 sqft",
+      "location": "Miami Beach, Florida",
+      "facilities": ["Rooftop terrace", "Infinity pool", "Gourmet kitchen"],
+     
+      "image_url": "https://i.ibb.co/Lt4r7Gy/penthous.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Private Beachfront Villa",
+      "segment_name": "Beachfront Properties",
+      "description": "Luxurious villa with direct access to a pristine private beach, perfect for relaxation and entertainment.",
+      "price": "$8,500,000",
+      "status": "sale",
+      "area": "6000 sqft",
+      "location": "Saint-Tropez, France",
+      "facilities": ["Beachfront pool", "Private cinema", "Spa"],
+      
+      "image_url": "https://i.ibb.co/0FBqnqR/beachfront.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Exclusive Island Resort",
+      "segment_name": "Resorts",
+      "description": "A secluded paradise offering an exclusive resort experience on a private island.",
+      "price": "Price on request",
+      "status": "sale",
+      "area": "Entire island",
+      "location": "Maldives",
+      "facilities": ["Luxury villas", "Private beaches", "Dining restaurants"],
+     
+      "image_url": "https://i.ibb.co/K9RjmwG/resorts.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Luxury Mansion in Beverly Hills",
+      "segment_name": "Mansions",
+      "description": "Magnificent mansion in the prestigious neighborhood of Beverly Hills, boasting lavish amenities and stunning architecture.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "10000 sqft",
+      "location": "Beverly Hills, California",
+      "facilities": ["Home theater", "Indoor basketball court", "Wine cellar"],
+      
+      "image_url": "https://i.ibb.co/0qKzjsS/mansions.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Luxury Villa in the Maldives",
+      "segment_name": "Villas",
+      "description": "Indulge in ultimate luxury at this breathtaking resort in the Maldives, surrounded by crystal-clear waters and pristine beaches.",
+      "price": "Price on request",
+      "status": "sale",
+      "area": "Entire resort",
+      "location": "Maldives",
+      "facilities": ["Overwater villas", "World-class spa", "Gourmet restaurants"],
+      "image_url": "https://i.ibb.co/Z6bnwTK/islands.jpg"
+      
+    },
+    {
+      "id": 6,
+      "estate_title": "Private Island Retreat",
+      "segment_name": "Private Islands",
+      "description": "Escape to your own private island retreat, where luxury meets seclusion in an idyllic tropical setting.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "Entire island",
+      "location": "Fiji",
+      "facilities": ["Luxury villas", "Private airstrip", "Helipad"],
+      "image_url": "https://i.ibb.co/s2BPW3n/villas.jpg"
+     
+    }
+  ]
