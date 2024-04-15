@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState,  } from "react";
 import PropTypes from "prop-types"
-import {GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import {GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
@@ -33,6 +33,13 @@ const FirebaseContext = ({children}) => {
         return signInWithPopup(auth, githubProvider)
     }
 
+    const profileUpdate = (name,photo) => {
+       return  updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photo
+          })
+    }
+
     const logOut = () => {
         setLoading(true)
         setUser(null)
@@ -56,6 +63,7 @@ const FirebaseContext = ({children}) => {
         signIn,
         googleLogin,
         githubLogin,
+        profileUpdate ,
         logOut
     }
 

@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
-    const {signUp,googleLogin,logOut,githubLogin} = useContext(AuthContext)
+    const {signUp,googleLogin,logOut,githubLogin, profileUpdate} = useContext(AuthContext)
 
     const {
         register,
@@ -17,6 +17,10 @@ const Register = () => {
       const onSubmit = (data) =>{ 
         signUp(data.email, data.password)
             .then(result => {
+                profileUpdate(data.name, data.photoURL)
+                .then(()=>{
+                    
+                })
                 logOut();
                 console.log(result.user)
             })
