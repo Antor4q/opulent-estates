@@ -1,13 +1,15 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../routes/FirebaseContext";
 import { Helmet } from "react-helmet-async";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
 
     const {signUp,googleLogin,logOut,githubLogin, profileUpdate} = useContext(AuthContext)
+    const {error, setError} = useState()
 
     const {
         register,
@@ -17,14 +19,23 @@ const Register = () => {
       } = useForm()
 
       const onSubmit = (data) =>{ 
+        const regexF = /^(?=.*[A-Z]).+$/
+
+        if(regexF.test(data?.password)){
+           return  setError("Password Must have an Uppercase letter")
+        }
+
         signUp(data.email, data.password)
             .then(result => {
+               
                 reset()
                 profileUpdate(data.name, data.photoURL)
                 .then(()=>{
-                  
+                   
                 })
+               
                 logOut();
+               toast.success("Registration Success")
                 console.log(result.user)
             })
             .catch(error => {
@@ -47,33 +58,35 @@ const Register = () => {
                     <span className="label-text">Name</span>
                 </label>
                 <input {...register("name", { required: true })} type="text" placeholder="Your name" className="input input-bordered"  />
-                {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
+                {errors.name && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Photo URL</span>
                 </label>
                 <input {...register("image", { required: true })} type="text" placeholder="Photo URL" className="input input-bordered" />
-                {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
+                {errors.image && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Email</span>
                 </label>
                 <input {...register("email", { required: true })} type="email" placeholder="email" className="input input-bordered"  />
-                {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
+                {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
                 <input {...register("password", { required: true })} type="password" placeholder="password" className="input input-bordered"  />
-                {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
+                {errors.password && <span className="text-red-500">This field is required</span> }
+                {error && <span>{error}</span>}
                
                 </div>
                
                 <div className="form-control mt-6">
                 <button className="btn bg-[#1DD100] lg:text-lg text-white">Register</button>
+                <Toaster />
                 </div>
                 <div className="flex lg:px-10">
                     <p>Already have an account?</p>

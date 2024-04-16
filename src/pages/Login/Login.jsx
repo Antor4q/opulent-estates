@@ -4,6 +4,7 @@ import { AuthContext } from "../../routes/FirebaseContext";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const Login = () => {
@@ -24,7 +25,10 @@ const Login = () => {
         .then(result => {
             reset()
             console.log(result.user)
+            toast.success("Login Success")
+           setTimeout(()=>{
             navigate(location?.state ? location.state : "/")
+           },500)
         })
         .catch(error => {
             console.log(error)
@@ -63,6 +67,7 @@ const Login = () => {
                 
                     <div className="form-control mt-6">
                     <button className="btn bg-[#1DD100] lg:text-lg text-white">Login</button>
+                    <Toaster />
                     </div>
                     <div className="flex lg:px-10">
                         <p>New Here?</p>
