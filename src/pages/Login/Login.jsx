@@ -3,6 +3,7 @@ import { Link,useLocation,useNavigate } from "react-router-dom";
 import { AuthContext } from "../../routes/FirebaseContext";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
@@ -68,8 +69,8 @@ const Login = () => {
                     <p className="text-center border-b lg:pb-4">Or Login in with</p>
                 </form>
                     <div className="flex gap-4 justify-center lg:pb-8 ">
-                        <button onClick={()=>googleLogin()} className="btn btn-outline w-1/3">Google</button>
-                        <button onClick={()=>githubLogin()} className="btn btn-outline w-1/3 btn-primary">Github</button>
+                        <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button>
+                        <button onClick={()=>githubLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3 "><FaGithub /> Github</button>
                     </div>
                 
                 </div>
