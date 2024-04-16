@@ -15,12 +15,14 @@ const Login = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
       } = useForm()
 
       const onSubmit = (data) =>{ 
         signIn(data.email, data.password)
         .then(result => {
+            reset()
             console.log(result.user)
             navigate(location?.state ? location.state : "/")
         })

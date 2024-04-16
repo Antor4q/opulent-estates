@@ -11,6 +11,7 @@ const Register = () => {
 
     const {
         register,
+        reset,
         handleSubmit,
         formState: { errors },
       } = useForm()
@@ -18,9 +19,10 @@ const Register = () => {
       const onSubmit = (data) =>{ 
         signUp(data.email, data.password)
             .then(result => {
+                reset()
                 profileUpdate(data.name, data.photoURL)
                 .then(()=>{
-                    
+                  
                 })
                 logOut();
                 console.log(result.user)
@@ -77,7 +79,7 @@ const Register = () => {
                     <p>Already have an account?</p>
                     <Link to="/login" className="text-blue-600 font-bold">Login</Link>
                 </div>
-                <p className="text-center">Or Register with</p>
+                <p className="text-center border-b lg:pb-8">Or Register with</p>
              </form>
                 <div className="flex gap-4 justify-center lg:pb-8">
                     <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button>

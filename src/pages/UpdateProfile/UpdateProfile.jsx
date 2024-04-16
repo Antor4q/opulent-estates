@@ -5,7 +5,7 @@ import { AuthContext } from "../../routes/FirebaseContext";
 
 const UpdateProfile = () => {
 
-    const {user,profileUpdate } = useContext(AuthContext)
+    const {user,setUser,profileUpdate } = useContext(AuthContext)
    
 
    
@@ -17,7 +17,10 @@ const UpdateProfile = () => {
         const photo = form.get("photo")
         
         profileUpdate(name, photo)
-        .then(()=>{})
+        .then(()=>{
+            setUser({...user, name,photo})
+            
+        })
         .catch(error => {
             console.log(error)
         })
