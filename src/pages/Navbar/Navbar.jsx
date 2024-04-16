@@ -16,6 +16,7 @@ const Navbar = () => {
     const nav = <>
                 <li className="text-lg"><NavLink  to="/">Home</NavLink></li>
                 <li className="text-lg"><NavLink to="/updateProfile">Update Profile</NavLink></li>
+                <li className="text-lg"><NavLink to="/contact">Contact Us</NavLink></li>
                  </>
 
     return (

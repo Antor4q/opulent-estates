@@ -32,7 +32,8 @@ const Register = () => {
     }
 
     return (
-        <div className="lg:max-w-[1440px] mx-auto lg:h-[calc(100vh-426px)] flex lg:p-10  justify-center ">
+       <div className=" lg:h-[calc(100vh-426px)]">
+                 <div className="lg:max-w-[1440px] mx-auto flex lg:p-10  justify-center ">
             <Helmet>
                 <title>Opulent Estates | Register</title>
             </Helmet>
@@ -83,6 +84,7 @@ const Register = () => {
                 </div>
              
             </div>
+       </div>
        </div>
     );
 };
