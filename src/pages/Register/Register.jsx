@@ -9,8 +9,7 @@ import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
 
     const {signUp,googleLogin,logOut,githubLogin, profileUpdate} = useContext(AuthContext)
-    const {error, setError} = useState()
-
+   const {charError,setCharError} = useState("")
     const {
         register,
         reset,
@@ -19,12 +18,10 @@ const Register = () => {
       } = useForm()
 
       const onSubmit = (data) =>{ 
-        const regexF = /^(?=.*[A-Z]).+$/
-
-        if(regexF.test(data?.password)){
-           return  setError("Password Must have an Uppercase letter")
-        }
-
+       
+      
+       
+      
         signUp(data.email, data.password)
             .then(result => {
                
@@ -39,9 +36,10 @@ const Register = () => {
                 console.log(result.user)
             })
             .catch(error => {
-                console.log(error)
+                console.log(error.message.slice(10,50))
+                setCharError(error.message.slice(10,50))
             })
-        
+       console.log(charError)
 
     }
 
@@ -67,6 +65,7 @@ const Register = () => {
                 <input {...register("image", { required: true })} type="text" placeholder="Photo URL" className="input input-bordered" />
                 {errors.image && <span className="text-red-500">This field is required</span>}
                 </div>
+
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Email</span>
@@ -74,13 +73,16 @@ const Register = () => {
                 <input {...register("email", { required: true })} type="email" placeholder="email" className="input input-bordered"  />
                 {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
+
                 <div className="form-control">
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
-                <input {...register("password", { required: true })} type="password" placeholder="password" className="input input-bordered"  />
-                {errors.password && <span className="text-red-500">This field is required</span> }
-                {error && <span>{error}</span>}
+                <input {...register("password", { required: true, pattern: /^(?=.*[A-Z])(?=.*[a-z]).*$/,minLength: 6 })} type="password" placeholder="password" className="input input-bordered"  />
+                {/* {errors.password && <span className="text-red-500">This field is required</span>} */}
+                {errors.password && errors.password.type === "required" && (<span className="text-red-500">This field is required</span>)}
+                {errors.password && errors.password.type === "pattern" && (<span className="text-red-500">Password must have an Uppercase and Lowercase</span>)}
+                {errors.password && errors.password.type === "minLength" && (<span className="text-red-500">Password should be at least 6 characters</span>)}
                
                 </div>
                
