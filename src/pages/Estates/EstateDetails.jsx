@@ -1,6 +1,7 @@
 import {   useParams } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
+import { Helmet } from "react-helmet-async";
 
 const EstateDetails = () => {
 
@@ -14,6 +15,9 @@ const EstateDetails = () => {
 
     return (
         <div className="lg:max-w-[1440px] mx-auto lg:h-[calc(100vh-426px)] lg:mt-16 mt-10">
+            <Helmet>
+                <title>Opulent Estates | Details </title>
+            </Helmet>
             <div className="grid lg:grid-cols-5 grid-cols-1 lg:gap-5 gap-4 p-8 lg:p-0">
                 <div className="lg:col-span-3 relative">
                     <img className="rounded-lg" src={image_url} alt="" />

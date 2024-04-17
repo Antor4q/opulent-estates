@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { IoIosCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
@@ -6,6 +7,9 @@ import { SlLocationPin } from "react-icons/sl";
 const Contact = () => {
     return (
         <div className="lg:max-w-[1440px] mx-auto lg:h-[calc(100vh-426px)] lg:my-16 md:my-8 my-5 md:h-[calc(100vh-465px)]">
+            <Helmet>
+                <title>Opulent Estates | Contact Us</title>
+            </Helmet>
            <section className="py-6  w-2/3 mx-auto shadow-2xl text-black">
             <div className="grid max-w-6xl grid-cols-1 px-6  mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <div className="py-6 md:py-0 md:px-6">
