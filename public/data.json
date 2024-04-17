@@ -30,9 +30,9 @@
       "estate_title": "Exclusive Island Resort",
       "segment_name": "Resorts",
       "description": "A secluded paradise offering an exclusive resort experience on a private island.",
-      "price": "Price on request",
+      "price": "$600,000",
       "status": "sale",
-      "area": "Entire island",
+      "area": "4000 sqft",
       "location": "Maldives",
       "facilities": ["Luxury villas", "Private beaches", "Dining restaurants"],
      
@@ -56,9 +56,9 @@
       "estate_title": "Luxury Villa in the Maldives",
       "segment_name": "Villas",
       "description": "Indulge in ultimate luxury at this breathtaking resort in the Maldives, surrounded by crystal-clear waters and pristine beaches.",
-      "price": "Price on request",
+      "price": "$400,000",
       "status": "sale",
-      "area": "Entire resort",
+      "area": "2000 sqft",
       "location": "Maldives",
       "facilities": ["Overwater villas", "World-class spa", "Gourmet restaurants"],
       "image_url": "https://i.ibb.co/s2BPW3n/villas.jpg"
@@ -71,7 +71,7 @@
       "description": "Escape to your own private island retreat, where luxury meets seclusion in an idyllic tropical setting.",
       "price": "$20,000,000",
       "status": "sale",
-      "area": "Entire island",
+      "area": "8000 sqft",
       "location": "Fiji",
       "facilities": ["Luxury villas", "Private airstrip", "Helipad"],
       "image_url": "https://i.ibb.co/Z6bnwTK/islands.jpg"

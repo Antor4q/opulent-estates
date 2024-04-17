@@ -1,20 +1,21 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log(import.meta.env.VITE_PASS)
 const firebaseConfig = {
-  apiKey: "AIzaSyDhdZe9SrudRBi4fhO0_DgEYCXJlNHitkU",
-  authDomain: "opulent-estates-1b663.firebaseapp.com",
-  projectId: "opulent-estates-1b663",
-  storageBucket: "opulent-estates-1b663.appspot.com",
-  messagingSenderId: "170392642528",
-  appId: "1:170392642528:web:4548aedf9d1d9366800185"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-export default auth
+
+export default app
