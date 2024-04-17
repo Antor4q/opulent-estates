@@ -8,7 +8,8 @@ Features:
     view property button.
  4. Estate Details: Estate Details have estates card details. You can see the details of estate by clicking
     on the view property button.
- 5. 404 page:
+ 5. 404 page: The 404 Page is designed as a fallback route for instances where users attempt to access a
+    URL that does not exist within the website
 
  NPM packages:
   1. Animate.css
