@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Root = () => {
     return (
-        <div>
+        <div className="font-poppins">
             <div className="bg-[#030712] lg:h-[155px]">
             <Navbar></Navbar>
             </div>

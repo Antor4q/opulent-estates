@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import { AuthContext } from "../../routes/FirebaseContext";
 
+
 const UpdateProfile = () => {
 
     const {user,setUser,profileUpdate } = useContext(AuthContext)
@@ -11,7 +12,7 @@ const UpdateProfile = () => {
    
 
    const handleSubmit = (e) => {
-        e.preventDefault()
+        
         const form = new FormData(e.currentTarget)
         const name = form.get("name")
         const photo = form.get("photo")
@@ -19,7 +20,7 @@ const UpdateProfile = () => {
         profileUpdate(name, photo)
         .then(()=>{
             setUser({...user,displayName: name,photoURL: photo})
-            
+           
         })
         .catch(error => {
             console.log(error)

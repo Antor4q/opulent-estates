@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css';
+import 'animate.css';
 
 
 
@@ -33,11 +34,11 @@ const Slider = () => {
                <div className="hero-overlay bg-opacity-50"></div>
                 <div className="hero-content absolute top-10 lg:top-40 text-center text-neutral-content">
                 <div >
-                  <h1 className="lg:mb-5 mb-3 text-2xl lg:text-5xl font-bold ">Welcome to <span className='text-[#1DD100]'>Opulent</span> Estates</h1>
-                  <p className="lg:mb-5 mb-3 ">Explore Luxury Living at its Finest: Penthouses, Beachfront Escapes, Resorts,<br></br> Private Islands, Villas, and Mansions. Find Your Dream Property Today. Explore Now.</p>
+                  <h1 className="lg:mb-5 mb-3 text-2xl lg:text-5xl font-bold animate__animated animate__zoomIn animate__slow	">Welcome to <span className='text-[#1DD100]'>Opulent</span> Estates</h1>
+                  <p className="lg:mb-5 mb-3 animate__animated animate__zoomIn animate__slow	">Explore Luxury Living at its Finest: Penthouses, Beachfront Escapes, Resorts,<br></br> Private Islands, Villas, and Mansions. Find Your Dream Property Today. Explore Now.</p>
                   <div className='flex gap-3 justify-center'>
-                  <button className="btn text-white hover:btn-outline border-none bg-[#1DD100]">Get Started</button>
-                  <button className="btn text-white btn-outline hover:bg-[#1DD100]">Read More</button>
+                  <button className="btn text-white hover:btn-outline animate__animated animate__zoomIn animate__slow border-none bg-[#1DD100]">Get Started</button>
+                  <button className="btn text-white btn-outline animate__animated animate__zoomIn animate__slow hover:bg-[#1DD100]">Read More</button>
                   </div>
                 </div>
               </div>
@@ -50,11 +51,11 @@ const Slider = () => {
                <div className="hero-overlay bg-opacity-50"></div>
                <div className="hero-content absolute top-10 lg:top-40 text-center text-neutral-content">
                 <div >
-                  <h1 className="lg:mb-5 mb-3 text-2xl lg:text-5xl font-bold">Welcome to <span className='text-[#1DD100]'>Opulent</span> Estates</h1>
-                  <p className="lg:mb-5 mb-3">Explore Luxury Living at its Finest: Penthouses, Beachfront Escapes, Resorts,<br></br> Private Islands, Villas, and Mansions. Find Your Dream Property Today. Explore Now.</p>
+                  <h1 className="lg:mb-5 mb-3 text-2xl lg:text-5xl font-bold animate__animated animate__zoomIn animate__slow">Welcome to <span className='text-[#1DD100]'>Opulent</span> Estates</h1>
+                  <p className="lg:mb-5 mb-3 animate__animated animate__zoomIn animate__slow">Explore Luxury Living at its Finest: Penthouses, Beachfront Escapes, Resorts,<br></br> Private Islands, Villas, and Mansions. Find Your Dream Property Today. Explore Now.</p>
                   <div className='flex gap-3 justify-center'>
-                  <button className="btn text-white hover:btn-outline border-none bg-[#1DD100]">Get Started</button>
-                  <button className="btn text-white btn-outline hover:bg-[#1DD100]">Read More</button>
+                  <button className="btn text-white hover:btn-outline animate__animated animate__zoomIn animate__slow border-none bg-[#1DD100]">Get Started</button>
+                  <button className="btn text-white btn-outline animate__animated animate__zoomIn animate__slow hover:bg-[#1DD100]">Read More</button>
                   </div>
                 </div>
               </div>
@@ -67,11 +68,11 @@ const Slider = () => {
                <div className="hero-overlay bg-opacity-50"></div>
                <div className="hero-content absolute top-10 lg:top-40 text-center text-neutral-content">
                 <div >
-                  <h1 className="lg:mb-5 mb-3 text-2xl lg:text-5xl font-bold">Welcome to <span className='text-[#1DD100]'>Opulent</span> Estates</h1>
-                  <p className="lg:mb-5 mb-3">Explore Luxury Living at its Finest: Penthouses, Beachfront Escapes, Resorts,<br></br> Private Islands, Villas, and Mansions. Find Your Dream Property Today. Explore Now.</p>
+                  <h1 className="lg:mb-5 mb-3 text-2xl lg:text-5xl font-bold animate__animated animate__zoomIn animate__slow">Welcome to <span className='text-[#1DD100]'>Opulent</span> Estates</h1>
+                  <p className="lg:mb-5 mb-3 animate__animated animate__zoomIn animate__slow">Explore Luxury Living at its Finest: Penthouses, Beachfront Escapes, Resorts,<br></br> Private Islands, Villas, and Mansions. Find Your Dream Property Today. Explore Now.</p>
                   <div className='flex gap-3 justify-center'>
-                  <button className="btn text-white hover:btn-outline border-none bg-[#1DD100]">Get Started</button>
-                  <button className="btn text-white btn-outline hover:bg-[#1DD100]">Read More</button>
+                  <button className="btn text-white hover:btn-outline animate__animated animate__zoomIn animate__slow border-none bg-[#1DD100]">Get Started</button>
+                  <button className="btn text-white btn-outline animate__animated animate__zoomIn animate__slow hover:bg-[#1DD100]">Read More</button>
                   </div>
                 </div>
               </div>
@@ -80,7 +81,7 @@ const Slider = () => {
             </SwiperSlide>
           
            <div className="flex bottom-0 left-0 right-0 absolute items-center justify-center gap-10 p-5 lg:gap-20">
-              <div className="button-prev-slide bg-[#1DD100] rounded-full text-2xl lg:text-4xl z-10">
+              <div className="button-prev-slide bg-[#1DD100]  rounded-full text-2xl lg:text-4xl z-10">
               <IoMdArrowRoundBack />
               </div>
               <div className="button-next-slide bg-[#1DD100] rounded-full text-2xl lg:text-4xl z-10">

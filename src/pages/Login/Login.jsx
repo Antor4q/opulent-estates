@@ -14,7 +14,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
-
+    console.log(location)
     const {
         register,
         handleSubmit,
@@ -29,6 +29,7 @@ const Login = () => {
             console.log(result.user)
             toast.success("Login Success")
            setTimeout(()=>{
+
             navigate(location?.state ? location.state : "/")
            },500)
         })
