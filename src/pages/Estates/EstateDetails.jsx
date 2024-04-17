@@ -28,11 +28,11 @@ const EstateDetails = () => {
                 
                 
                 <div className="lg:col-span-2">
-                    <h2 className="text-[#131313] text-[40px] font-bold">{estate_title}</h2>
+                    <h2 className="text-[#131313] text-3xl lg:text-[40px] font-bold">{estate_title}</h2>
                     
                     <p className="text-[#131313B3] lg:my-5 my-3">{description}</p>
                     <h4 className="text-[#131313CC]  text-[20px] font-medium lg:mt-5 border-y py-3 mt-3">{segment_name}</h4>
-                    <p className="flex gap-3 lg:my-5 my-3 font-semibold text-xl items-center border-b pb-3"><SlLocationPin /> {location}</p>
+                    <p className="flex gap-3 lg:my-5 my-3 font-semibold text-base lg:text-xl items-center border-b pb-3"><SlLocationPin /> {location}</p>
                     <p className="text-[#131313B3] font-bold">Facilities </p>
                     <ul className='list-disc ml-6 '>
                         {

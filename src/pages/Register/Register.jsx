@@ -5,11 +5,14 @@ import { AuthContext } from "../../routes/FirebaseContext";
 import { Helmet } from "react-helmet-async";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
+import { LuEye, LuEyeOff } from "react-icons/lu";
 
 const Register = () => {
 
     const {signUp,googleLogin,logOut,githubLogin, profileUpdate} = useContext(AuthContext)
    const {charError,setCharError} = useState("")
+   const {showPassword,setShowPassword} = useState(false)
+   console.log(showPassword)
     const {
         register,
         reset,
@@ -74,12 +77,12 @@ const Register = () => {
                 {errors.email && <span className="text-red-500">This field is required</span>}
                 </div>
 
-                <div className="form-control">
+                <div className="form-control ">
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
-                <input {...register("password", { required: true, pattern: /^(?=.*[A-Z])(?=.*[a-z]).*$/,minLength: 6 })} type="password" placeholder="password" className="input input-bordered"  />
-                {/* {errors.password && <span className="text-red-500">This field is required</span>} */}
+                <input {...register("password", { required: true, pattern: /^(?=.*[A-Z])(?=.*[a-z]).*$/,minLength: 6 })} type={showPassword ? "text": "password"} placeholder="password" className="input  input-bordered "  />
+                <span className="text-3xl" onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <LuEyeOff />:<LuEye />}</span>
                 {errors.password && errors.password.type === "required" && (<span className="text-red-500">This field is required</span>)}
                 {errors.password && errors.password.type === "pattern" && (<span className="text-red-500">Password must have an Uppercase and Lowercase</span>)}
                 {errors.password && errors.password.type === "minLength" && (<span className="text-red-500">Password should be at least 6 characters</span>)}

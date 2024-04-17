@@ -18,7 +18,7 @@ const UpdateProfile = () => {
         
         profileUpdate(name, photo)
         .then(()=>{
-            setUser({...user, name,photo})
+            setUser({...user,displayName: name,photoURL: photo})
             
         })
         .catch(error => {

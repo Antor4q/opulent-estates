@@ -7,11 +7,11 @@ const Estates = ({estate}) => {
     
 
     return (
-        <div >
+        <div>
             
             <div className="card card-compact  bg-base-100 shadow-xl">
                 <figure className="relative">
-                    <img className="h-[260px] w-full" src={image_url} alt="Shoes" />
+                    <img className="lg:h-[260px] h-[200px] w-full" src={image_url} alt="Shoes" />
                    
                      
                    

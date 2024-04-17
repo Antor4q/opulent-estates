@@ -19,9 +19,9 @@ const Home = () => {
 
             <Banner></Banner>
            
-           <div className="lg:mt-10">
+           <div className="lg:mt-10 mt-7">
            <h2 className="text-3xl lg:mb-5 text-center font-bold">Luxury Estates</h2>
-            <div className="lg:max-w-[1440px] lg:my-12 mx-auto grid lg:grid-cols-3 lg:gap-8">
+            <div className="lg:max-w-[1440px] p-5 lg:p-0  lg:my-12 mx-auto grid lg:grid-cols-3 gap-4 lg:gap-8">
                 {
                     estates.map(estate =>  <Estates key={estate.id} estate={estate}></Estates>)
                 }
