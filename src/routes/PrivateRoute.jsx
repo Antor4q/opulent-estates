@@ -12,7 +12,7 @@ const PrivateRoute = ({children}) => {
 
    if(loading){
     return <>
-    <div className="lg:h-[calc(100vh-426px)] lg:max-w-[1440px] mx-auto flex justify-center">
+    <div className="lg:h-[calc(100vh-426px)] h-[calc(100vh-597px)] md:h-[calc(100vh-465px)] lg:max-w-[1440px] mx-auto flex justify-center">
             <span className="loading loading-bars loading-lg"></span>
         </div>
     </>
