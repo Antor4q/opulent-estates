@@ -1,5 +1,7 @@
 # Opulent Estates
 
+Live Link: https://opulent-estates-1b663.web.app/
+
 Features:
  1. Navbar: The navbar prominently displays the website name and features active routes to indicate
      the current page. Navigation links include Home, Update Profile , and User Profile, which is conditional:
