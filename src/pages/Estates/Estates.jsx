@@ -9,9 +9,9 @@ const Estates = ({estate}) => {
     return (
         <div>
             
-            <div className="card card-compact  bg-base-100 shadow-xl">
+            <div className="card card-compact md:h-[470px] bg-base-100 shadow-xl">
                 <figure className="relative">
-                    <img className="lg:h-[260px] h-[200px] w-full" src={image_url} alt="Shoes" />
+                    <img className="lg:h-[260px] md:h-[230px] h-[200px] w-full" src={image_url} alt="Shoes" />
                    
                      
                    
@@ -20,8 +20,8 @@ const Estates = ({estate}) => {
                 <p className="text-white text-2xl">{status}</p>
                 </div>
                 <div className="card-body">
-                    <h2 className="card-title text-3xl">{estate_title}</h2>
-                    <p className="flex gap-3 font-semibold text-xl items-center"><IoLocationOutline /> {location}</p>
+                    <h2 className="card-title text-2xl lg:text-3xl">{estate_title}</h2>
+                    <p className="flex gap-3 font-semibold text-lg lg:text-xl items-center"><IoLocationOutline /> {location}</p>
                     <p>{description}</p>
                     <div className="card-actions ">
                     <Link to={`/estateDetail/${id}`} className="btn bg-[#1DD100] text-white">View Property</Link>

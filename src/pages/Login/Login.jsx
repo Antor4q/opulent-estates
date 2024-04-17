@@ -1,15 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link,useLocation,useNavigate } from "react-router-dom";
 import { AuthContext } from "../../routes/FirebaseContext";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
+import { LuEye, LuEyeOff } from "react-icons/lu";
 
 
 const Login = () => {
 
     const { signIn,googleLogin,githubLogin } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false)
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -62,8 +64,14 @@ const Login = () => {
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
-                    <input {...register("password", { required: true })} type="password" placeholder="password" className="input input-bordered"/>
-                    {errors.exampleRequired && <span className="text-red-500">This field is required</span>}
+                    <div className="relative">
+                <input {...register("password", { required: true, pattern: /^(?=.*[A-Z])(?=.*[a-z]).*$/,minLength: 6 })}
+                 type={showPassword ? "text": "password"} 
+                 placeholder="password" 
+                 className="input w-full  input-bordered "  />
+                <span className="text-xl absolute right-3 top-4" onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <LuEyeOff />:<LuEye />}</span>
+                </div>
+
                     </div>
                 
                     <div className="form-control mt-6">
@@ -74,13 +82,14 @@ const Login = () => {
                         <p>New Here?</p>
                         <Link to="/register" className="text-blue-600 font-bold">Register</Link>
                     </div>
-                    <p className="text-center border-b lg:pb-4">Or Login in with</p>
+                    <p className="text-center border-b lg:pb-4">Continue With</p>
                 </form>
-                    <div className="flex gap-4 justify-center lg:pb-8 ">
-                        <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button>
+                    <div className="flex gap-4 justify-center items-center lg:pb-8 ">
+                        <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button><p>OR</p>
                         <button onClick={()=>githubLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3 "><FaGithub /> Github</button>
                     </div>
-                
+                  
+                                    
                 </div>
             </div>
        </div>

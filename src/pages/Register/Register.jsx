@@ -10,9 +10,7 @@ import { LuEye, LuEyeOff } from "react-icons/lu";
 const Register = () => {
 
     const {signUp,googleLogin,logOut,githubLogin, profileUpdate} = useContext(AuthContext)
-   const {charError,setCharError} = useState("")
-   const {showPassword,setShowPassword} = useState(false)
-   console.log(showPassword)
+        const [showPassword, setShowPassword] = useState(false)
     const {
         register,
         reset,
@@ -23,7 +21,6 @@ const Register = () => {
       const onSubmit = (data) =>{ 
        
       
-       
       
         signUp(data.email, data.password)
             .then(result => {
@@ -40,9 +37,9 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error.message.slice(10,50))
-                setCharError(error.message.slice(10,50))
+               
             })
-       console.log(charError)
+      
 
     }
 
@@ -81,8 +78,14 @@ const Register = () => {
                 <label className="label">
                     <span className="label-text">Password</span>
                 </label>
-                <input {...register("password", { required: true, pattern: /^(?=.*[A-Z])(?=.*[a-z]).*$/,minLength: 6 })} type={showPassword ? "text": "password"} placeholder="password" className="input  input-bordered "  />
-                <span className="text-3xl" onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <LuEyeOff />:<LuEye />}</span>
+                <div className="relative">
+                <input {...register("password", { required: true, pattern: /^(?=.*[A-Z])(?=.*[a-z]).*$/,minLength: 6 })}
+                 type={showPassword ? "text": "password"} 
+                 placeholder="password" 
+                 className="input w-full  input-bordered "  />
+                <span className="text-xl absolute right-3 top-4" onClick={()=>setShowPassword(!showPassword)}>{showPassword ? <LuEyeOff />:<LuEye />}</span>
+                </div>
+
                 {errors.password && errors.password.type === "required" && (<span className="text-red-500">This field is required</span>)}
                 {errors.password && errors.password.type === "pattern" && (<span className="text-red-500">Password must have an Uppercase and Lowercase</span>)}
                 {errors.password && errors.password.type === "minLength" && (<span className="text-red-500">Password should be at least 6 characters</span>)}
@@ -97,12 +100,12 @@ const Register = () => {
                     <p>Already have an account?</p>
                     <Link to="/login" className="text-blue-600 font-bold">Login</Link>
                 </div>
-                <p className="text-center border-b lg:pb-8">Or Register with</p>
+                <p className="text-center border-b lg:pb-8">Continue With</p>
              </form>
-                <div className="flex gap-4 justify-center lg:pb-8">
-                    <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button>
-                    <button onClick={()=>githubLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3 "><FaGithub /> Github</button>
-                </div>
+             <div className="flex gap-4 justify-center items-center lg:pb-8 ">
+                        <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button><p>OR</p>
+                        <button onClick={()=>githubLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3 "><FaGithub /> Github</button>
+                    </div>
              
             </div>
        </div>

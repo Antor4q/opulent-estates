@@ -27,7 +27,7 @@ const UpdateProfile = () => {
         console.log(name, photo)
    }
     return (
-        <div className="lg:max-w-[1440px] mx-auto flex items-center justify-center  lg:h-[calc(100vh-426px)]" >
+        <div className="lg:max-w-[1440px] mx-auto flex items-center justify-center md:h-[calc(100vh-465px)]  lg:h-[calc(100vh-426px)] md:p-8 md:mt-5" >
             <Helmet>
                 <title>Opulent Estates | Update Profile</title>
             </Helmet>
