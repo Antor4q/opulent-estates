@@ -102,7 +102,7 @@ const Register = () => {
                 </div>
                 <p className="text-center border-b lg:pb-8">Continue With</p>
              </form>
-             <div className="flex gap-4 justify-center items-center lg:pb-8 ">
+             <div className="flex gap-4 justify-center items-center pb-6 lg:pb-8 ">
                         <button onClick={()=>googleLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3"><FaGoogle /> Google</button><p>OR</p>
                         <button onClick={()=>githubLogin()} className="btn btn-outline hover:bg-[#1DD100] w-1/3 "><FaGithub /> Github</button>
                     </div>

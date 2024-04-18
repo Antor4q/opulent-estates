@@ -18,7 +18,7 @@ const Footer = () => {
                                     <a rel="noopener noreferrer" href="#">Features</a>
                                 </li>
                                 <li>
-                                    <a rel="noopener noreferrer" href="#">Integrations</a>
+                                    <a rel="noopener noreferrer" href="#">Estates</a>
                                 </li>
                                 <li>
                                     <a rel="noopener noreferrer" href="#">Pricing</a>
