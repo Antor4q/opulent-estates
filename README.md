@@ -1,6 +1,10 @@
 # Opulent Estates
 
-Live Link: https://opulent-estates-1b663.web.app/
+Live Link: https://opulent-estates-1b663.web.app
+
+Opulent Estates is a premier web platform designed for users to explore and purchase real estate. 
+It offers a sophisticated and user-friendly interface, making the process of finding and acquiring
+properties seamless and efficient.
 
 Features:
  1. Navbar: The navbar prominently displays the website name and features active routes to indicate
@@ -18,9 +22,12 @@ Features:
   2. React Hook Form
   3. Swiper slider
     
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Getting Started -
 
-Currently, two official plugins are available:
+ 1. Clone the repository: https://github.com/Antor4q/opulent-estates.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 2. Install dependencies: npm install
+
+ 3. Set up environment variables: Create a .env file in the root directory. add firebse config keys.
+ 4. 
+ 5. Run the application: npm run dev
