@@ -29,5 +29,5 @@ Getting Started -
  2. Install dependencies: npm install
 
  3. Set up environment variables: Create a .env file in the root directory. add firebse config keys.
- 4. 
- 5. Run the application: npm run dev
+    
+ 4. Run the application: npm run dev
